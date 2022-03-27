@@ -1,17 +1,11 @@
 package com.ContactList;
 
-public class PersonalContact extends ContactList{
-
-    int dateOfBirth;
+public class PersonalContact extends Contact {
 
 
-    public void PersonalContact(String firstName, String lastName, String address, int phoneNumber, String email, int dateOfBirth) {
-        super.contactList(firstName, lastName, address, phoneNumber, email);
-
-        this.dateOfBirth = dateOfBirth;
+    public PersonalContact(String firstName, String lastName, String address, String phoneNumber, String email) {
+        super(firstName, lastName, address, phoneNumber, email);
     }
 
-    public int getDateOfBirth() {
-        return dateOfBirth;
-    }
+
 }
