@@ -1,10 +1,7 @@
 package com.ContactList;
 
 import java.security.spec.ECField;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -13,12 +10,14 @@ public class Main {
 
     public static void main(String[] args) {
         displayMenu();
+        System.out.println("Have a good day! Shutting down....");
     }
 
 
 
     public static void displayMenu() {
 
+       boolean exit;
 
 
         do {
@@ -38,14 +37,12 @@ public class Main {
 
 
                     break;
-                case 3:
-                    //allow the user to display the contact information
-                    break;
-                case 4:
+                default:
+                    exit = false;
                     //this is to quit the program
             }
+        } while(!true);
 
-        } while (true);
     }
 
     public static void contactInput(){
@@ -90,8 +87,7 @@ public class Main {
 
     public static void addContact() {
         Scanner sc = new Scanner(System.in);
-        //ask the user if they want a personal or business contact
-
+        //ask the user if they want a personal or business contac
 
         try{
 
@@ -114,7 +110,7 @@ public class Main {
 
     public static void viewContacts(){
         for(int i = 0; i < contacts.size() ; i++){
-            System.out.println(i);
+            System.out.println(contacts.get(i));
         }
     }
 
