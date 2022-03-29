@@ -9,12 +9,17 @@ public class Contact {
     String email;
 
 
+
     public Contact(String firstName, String lastName, String address, String phoneNumber, String email){
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.email = email;
+    }
+
+    public String toString(){
+        return firstName + " " + lastName + " " + address + " " +  phoneNumber + " " + email + " ";
     }
 
 
